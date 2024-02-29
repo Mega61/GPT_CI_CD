@@ -7,6 +7,11 @@ app = Flask(__name__)
 CORS(app)
 
 
+@app.route('/')
+def status_check():
+    return 'Server is running!'
+
+
 @app.route('/agorai_assistant', methods=['POST'])
 def agorai_assistant():
     data = request.json

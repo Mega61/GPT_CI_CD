@@ -4,7 +4,7 @@ After=network.target
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ubuntu/helloworld
+WorkingDirectory=/home/user/GPT_CI_CD
 ExecStart=/home/ec2-user/GPT_CI_CD/venv/bin/gunicorn -b localhost:8000 app:app
 Restart=always
 [Install]

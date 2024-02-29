@@ -1,9 +1,6 @@
 from flask import Flask, request, jsonify
-from dotenv import load_dotenv
 from Facades.gpt_facade import GPT_Facade
 from flask_cors import CORS
-
-load_dotenv()
 
 
 app = Flask(__name__)

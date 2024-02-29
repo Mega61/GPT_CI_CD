@@ -1,0 +1,11 @@
+[Unit]
+Description=Gunicorn instance for GPT Api Manager (Integrator)
+After=network.target
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/helloworld
+ExecStart=/home/ec2-user/GPT_CI_CD/venv/bin/gunicorn -b localhost:8000 app:app
+Restart=always
+[Install]
+WantedBy=multi-user.target

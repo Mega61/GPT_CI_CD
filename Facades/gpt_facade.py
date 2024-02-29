@@ -52,7 +52,7 @@ class GPT_Facade:
         else:
             return "No messages found in the thread."
 
-    def get_assistant_id(json_file, assistant_id):
+    def get_assistant_id(self, json_file, assistant_id):
         with open(json_file, 'r') as file:
             data = json.load(file)
             return data.get(assistant_id)

@@ -1,5 +1,4 @@
 import os
-from dotenv import load_dotenv
 from time import sleep
 from Services.open_ai_service import Open_ai_service
 import json
@@ -7,7 +6,6 @@ import json
 class GPT_Facade:
 
     def __init__(self) -> None:
-        load_dotenv()
         openai_api_key = os.getenv('OPEN_AI_API_KEY')
         self.open_ai_service = Open_ai_service(openai_api_key)
 
